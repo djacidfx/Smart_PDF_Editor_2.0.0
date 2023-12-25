@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_white_24dp"
+            android:title="@string/home_page" />
+        <item android:title="@string/create_new_pdfs">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_camera"
+                        android:icon="@drawable/ic_create_pdf_24"
+                        android:title="@string/create_pdf" />
+                    <item
+                        android:id="@+id/nav_text_to_pdf"
+                        android:icon="@drawable/ic_text_to_pdf_nav"
+                        android:title="@string/text_to_pdf" />
+                    <item
+                        android:id="@+id/nav_qrcode"
+                        android:icon="@drawable/ic_qr_barcodes_nav"
+                        android:title="@string/qr_barcode_pdf" />
+                    <item
+                        android:id="@+id/nav_excel_to_pdf"
+                        android:icon="@drawable/ic_excel_to_pdf_nav"
+                        android:title="@string/excel_to_pdf" />
+                </group>
+            </menu>
+        </item>
+        <item android:title="@string/view_pdfs">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_gallery"
+                        android:icon="@drawable/ic_view_files_nav"
+                        android:title="@string/viewFiles" />
+                    <item
+                        android:id="@+id/nav_history"
+                        android:icon="@drawable/ic_history_nav"
+                        android:title="@string/history" />
+                </group>
+            </menu>
+        </item>
+        <item android:title="@string/enhance_created_pdfs">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_add_password"
+                        android:icon="@drawable/ic_add_password_nav"
+                        android:title="@string/add_password" />
+                    <item
+                        android:id="@+id/nav_add_text"
+                        android:icon="@drawable/ic_add_text_nav"
+                        android:title="@string/add_text" />
+                    <item
+                        android:id="@+id/nav_add_images"
+                        android:icon="@drawable/ic_add_images_nav"
+                        android:title="@string/add_images" />
+                    <item
+                        android:id="@+id/nav_add_watermark"
+                        android:icon="@drawable/ic_add_watermark_nav"
+                        android:title="@string/add_watermark" />
+                    <item
+                        android:id="@+id/nav_rotate_pages"
+                        android:icon="@drawable/ic_rotate_pages_nav"
+                        android:title="@string/rotate_pages" />
+                </group>
+            </menu>
+        </item>
+        <item android:title="@string/modify_existing_pdfs">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_merge"
+                        android:icon="@drawable/ic_merge_pdf_nav"
+                        android:title="@string/merge_pdf" />
+                    <item
+                        android:id="@+id/nav_split"
+                        android:icon="@drawable/ic_split_pdf_nav"
+                        android:title="@string/split_pdf" />
+                    <item
+                        android:id="@+id/nav_remove_duplicate_pages"
+                        android:icon="@drawable/ic_remove_duplicate_pages_nav"
+                        android:title="@string/remove_duplicate_pages" />
+                    <item
+                        android:id="@+id/nav_compress_pdf"
+                        android:icon="@drawable/ic_compress_pdf_nav"
+                        android:title="@string/compress_pdf" />
+                    <item
+                        android:id="@+id/nav_invert_pdf"
+                        android:icon="@drawable/ic_invert_pdf_nav"
+                        android:title="@string/invert_pdf" />
+                </group>
+            </menu>
+        </item>
+        <item android:title="@string/more_options">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_text_extract"
+                        android:icon="@drawable/ic_extract_text_nav"
+                        android:title="@string/extract_text" />
+                    <item
+                        android:id="@+id/nav_remove_pages"
+                        android:icon="@drawable/ic_remove_pages_nav"
+                        android:title="@string/remove_pages" />
+                    <item
+                        android:id="@+id/nav_rearrange_pages"
+                        android:icon="@drawable/ic_reorder_pages_nav"
+                        android:title="@string/reorder_pages" />
+                    <item
+                        android:id="@+id/nav_extract_images"
+                        android:icon="@drawable/ic_extract_images_nav"
+                        android:title="@string/extract_images" />
+                    <item
+                        android:id="@+id/nav_pdf_to_images"
+                        android:icon="@drawable/ic_pdf_to_images_nav"
+                        android:title="@string/pdf_to_images" />
+                    <item
+                        android:id="@+id/nav_zip_to_pdf"
+                        android:icon="@drawable/ic_zip_to_pdf_nav"
+                        android:title="@string/zip_to_pdf" />
+                </group>
+            </menu>
+        </item>
+        <item android:title="@string/extras">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_faq"
+                        android:icon="@drawable/ic_faq_nav"
+                        android:title="@string/faqs" />
+                    <item
+                        android:id="@+id/nav_settings"
+                        android:icon="@drawable/ic_setting_nav"
+                        android:title="@string/settings" />
+                    <item
+                        android:id="@+id/nav_rateus"
+                        android:icon="@drawable/ic_rate_nav"
+                        android:title="@string/rate_us" />
+                    <item
+                        android:id="@+id/nav_share"
+                        android:icon="@drawable/ic_share_nav"
+                        android:title="@string/share" />
+                    <item
+                        android:id="@+id/nav_help"
+                        android:icon="@drawable/ic_help_nav"
+                        android:title="@string/help" />
+                    <item
+                        android:id="@+id/nav_about"
+                        android:icon="@drawable/ic_about_us_nav"
+                        android:title="@string/about_us" />
+                    <item
+                        android:id="@+id/nav_lang"
+                        android:icon="@drawable/ic_langauge"
+                        android:title="@string/Languages" />
+
+                    <item
+                        android:id="@+id/nav_privacy"
+                        android:icon="@drawable/ic_policy"
+                        android:title="@string/privacy" />
+
+                    <item android:id="@+id/nav_dark_theme"
+                        app:actionLayout="@layout/drawer_switch"
+                        android:title="@string/about_dark"
+                        android:icon="@drawable/ic_dark_mode"/>
+                    <!--<item
+                        android:id="@+id/nav_dark_theme"
+                        android:icon="@drawable/ic_about_us_nav"
+                        android:actionLayout="@layout/drawer_switch"
+                        android:title="@string/about_dark" >
+
+                        <menu>
+                            <item
+                                android:id="@+id/switch_item"
+                                app:actionLayout="@layout/drawer_switch"
+                                android:title="@string/about_dark" />
+                        </menu>
+                    </item>-->
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>

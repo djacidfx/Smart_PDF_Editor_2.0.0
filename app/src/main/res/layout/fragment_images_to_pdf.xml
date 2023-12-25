@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="vertical">
+
+                <com.dd.morphingbutton.MorphingButton
+                    android:id="@+id/addImages"
+                    style="@style/MorphingButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/sfpro_display_medium"
+                    android:gravity="center"
+                    android:text="@string/select_images_text"
+                    android:textAlignment="center" />
+
+                <com.dd.morphingbutton.MorphingButton
+                    android:id="@+id/pdfOpen"
+                    style="@style/MorphingButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/sfpro_display_medium"
+                    android:gravity="center"
+                    android:text="@string/open_pdf_text"
+                    android:visibility="gone" />
+
+                <com.dd.morphingbutton.MorphingButton
+                    android:id="@+id/pdfCreate"
+                    style="@style/MorphingButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="24dp"
+                    android:enabled="false"
+                    android:fontFamily="@font/sfpro_display_medium"
+                    android:gravity="center"
+                    android:text="@string/create_pdf_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom|center_vertical|center_horizontal|center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dividerColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sfpro_display_medium"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/opposite_theme"
+                    android:text="@string/more_options_text"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/enhancement_options_recycle_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:isScrollContainer="false"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfpro_display_medium"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:text="@string/app_name"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvNoOfImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/bottomSheetColor"
+            android:fontFamily="@font/sfpro_display_medium"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:textColor="?attr/bottomSheetTextColor"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/layoutDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </LinearLayout>
+</RelativeLayout>

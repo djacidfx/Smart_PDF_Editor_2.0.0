@@ -1,0 +1,126 @@
+plugins {
+    id 'com.android.application'
+
+}
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.templatemela.smartpdfreader"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation"  : "$projectDir/schemas".toString(),
+                        "room.incremental"     : "true",
+                        "room.expandProjection": "true"]
+            }
+        }
+
+        /*ndk
+                {
+                    abiFilters "armeabi-v7a", "x86", "x86_64", "arm64-v8a"
+                }*/
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    packagingOptions {
+        pickFirst 'META-INF/DEPENDENCIES.txt'
+        pickFirst 'META-INF/LICENSE.txt'
+        pickFirst 'META-INF/NOTICE.txt'
+        pickFirst 'META-INF/NOTICE'
+        pickFirst 'META-INF/LICENSE'
+        pickFirst 'META-INF/DEPENDENCIES'
+        pickFirst 'META-INF/notice.txt'
+        pickFirst 'META-INF/license.txt'
+        pickFirst 'META-INF/dependencies.txt'
+        pickFirst 'META-INF/LGPL2.1'
+        pickFirst 'META-INF/rxjava.properties'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation project(path: ':pdfviewer')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation "androidx.preference:preference:1.1.1"
+    implementation "com.github.danielnilsson9:color-picker-view:1.4.0@aar"
+    implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.burhanrashid52:photoeditor:1.5.1'
+    implementation 'com.eftimoff:android-viewpager-transformers:1.0.1@aar'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.balysv:material-ripple:1.0.2'
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "android.arch.lifecycle:common-java8:1.1.1"
+    def room_version = "2.4.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation 'com.itextpdf:itextpdf:5.5.9'
+    implementation 'com.github.dmytrodanylyk:android-morphing-button:1.0'
+    implementation 'com.airbnb.android:lottie:4.2.2'
+    implementation 'com.zhihu.android:matisse:0.5.3-beta3'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    //image_picker
+    implementation 'com.github.esafirm:android-image-picker:2.4.5'
+//    implementation group: 'com.google.zxing', name: 'android-integration', version: '3.3.0'
+    implementation 'com.journeyapps:zxing-android-embedded:3.5.0'
+    implementation "androidx.multidex:multidex:2.0.1"
+    implementation (group: 'com.aspose', name: 'aspose-cells', version: '21.12', classifier: 'android.via.java')
+//    implementation 'org.apache.poi:poi-ooxml:5.1.0'
+//    implementation 'org.apache.poi:poi-scratchpad:5.1.0'//
+    implementation 'org.apache.poi:poi-ooxml:3.9'
+    implementation 'org.apache.poi:poi-scratchpad:3.9'
+    implementation 'com.github.LuckSiege:PictureSelectorLight:v2.1.1'
+    implementation 'commons-cli:commons-cli:20040117.000000'
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
+    implementation group: 'org.bouncycastle', name: 'bcprov-jdk15to18', version: '1.64'
+    implementation 'com.droidninja:filepicker:2.2.5'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.1"
+    implementation 'com.vincent.filepicker:MultiTypeFilePicker:1.0.8'
+    //dexter
+    implementation 'com.karumi:dexter:6.2.2'
+    //multidex
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
+}
+android.buildTypes.release.ndk.debugSymbolLevel = 'FULL'

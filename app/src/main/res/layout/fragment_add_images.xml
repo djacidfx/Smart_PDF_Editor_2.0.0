@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layoutDelete"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutDelete">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:stretchColumns="*">
+
+            <com.dd.morphingbutton.MorphingButton
+                android:id="@+id/selectFile"
+                style="@style/MorphingButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/sfpro_display_medium"
+                android:maxWidth="30dp"
+                android:text="@string/merge_file_select"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:textColor="@color/opposite_theme"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/sfpro_display_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/selected_images_text" />
+
+            <com.dd.morphingbutton.MorphingButton
+                android:id="@+id/pdfCreate"
+                style="@style/MorphingButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/sfpro_display_medium"
+                android:maxWidth="30dp"
+                android:padding="3dp"
+                android:text="@string/create_pdf" />
+
+            <com.dd.morphingbutton.MorphingButton
+                android:id="@+id/pdfOpen"
+                style="@style/MorphingButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/sfpro_display_medium"
+                android:gravity="center"
+                android:text="@string/open_pdf_text"
+                android:visibility="gone" />
+
+            <com.dd.morphingbutton.MorphingButton
+                android:id="@+id/addImages"
+                style="@style/MorphingButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/sfpro_display_medium"
+                android:maxWidth="30dp"
+                android:padding="3dp"
+                android:text="@string/add_images"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvNoOfImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <include layout="@layout/bottom_sheet" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

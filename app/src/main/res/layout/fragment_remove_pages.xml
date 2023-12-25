@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layoutDelete"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutDelete">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:stretchColumns="*">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="8dp"
+                android:layout_height="wrap_content">
+                <com.dd.morphingbutton.MorphingButton
+                    android:id="@+id/selectFile"
+                    style="@style/MorphingButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sfpro_display_medium"
+                    android:maxWidth="30dp"
+                    android:text="@string/merge_file_select"
+                   />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/infoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/sfpro_display_medium"
+                android:text="@string/compress_pdf_prompt" />
+
+            <EditText
+                android:id="@+id/pages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:autofillHints=""
+                android:fontFamily="@font/sfpro_display_medium"
+                android:hint="@string/prompt_input"
+                android:inputType="number"
+                android:labelFor="@+id/infoText"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/compressionInfoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/compress_info"
+                android:visibility="gone" />
+
+            <com.dd.morphingbutton.MorphingButton
+                android:id="@+id/pdfCreate"
+                style="@style/MorphingButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/sfpro_display_medium"
+                android:text="@string/create_pdf"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <com.dd.morphingbutton.MorphingButton
+                android:id="@+id/pdfOpen"
+                style="@style/MorphingButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/create_pdf_added_text"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/sfpro_display_medium"
+                android:maxWidth="30dp"
+                android:padding="3dp"
+                android:text="@string/open_pdf_text"
+                android:visibility="gone" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/view_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/mb_green"
+                android:layout_marginRight="24dp"
+                app:cardCornerRadius="10dp"
+                android:fontFamily="@font/sfpro_display_medium"
+                android:text="@string/view_pdf"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <include layout="@layout/bottom_sheet" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

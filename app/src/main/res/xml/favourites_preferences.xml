@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:icon="@drawable/ic_image_to_pdf"
+        android:key="@string/images_to_pdf"
+        android:title="Images to PDF" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_text_to_pdf"
+        android:key="@string/text_to_pdf"
+        android:title="@string/text_to_pdf" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_qr_barcode"
+        android:key="@string/qr_barcode_pdf"
+        android:title="@string/qr_barcode_pdf" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_excel_to_pdf"
+        android:key="@string/excel_to_pdf"
+        android:title="@string/excel_to_pdf" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_view_files"
+        android:key="@string/viewFiles"
+        android:title="@string/viewFiles" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_history"
+        android:key="@string/history"
+        android:title="@string/history" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_add_password"
+        android:key="@string/add_password"
+        android:title="@string/add_password" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_remove_password"
+        android:key="@string/remove_password"
+        android:title="@string/remove_password" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_add_text"
+        android:key="@string/add_text"
+        android:title="@string/add_text" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_rotate_page"
+        android:key="@string/rotate_pages"
+        android:title="@string/rotate_pages" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_extrace_images"
+        android:key="@string/extract_text"
+        android:title="@string/extract_text" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_add_watermark"
+        android:key="@string/add_watermark"
+        android:title="@string/add_watermark" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_add_image"
+        android:key="@string/add_images"
+        android:title="@string/add_images" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_merge_pdf"
+        android:key="@string/merge_pdf"
+        android:title="@string/merge_pdf" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_split_pdf"
+        android:key="@string/split_pdf"
+        android:title="@string/split_pdf" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_invert_pdf"
+        android:key="@string/invert_pdf"
+        android:title="@string/invert_pdf" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_compress_pdf"
+        android:key="@string/compress_pdf"
+        android:title="@string/compress_pdf" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_remove_duplicate"
+        android:key="@string/remove_duplicate_pages"
+        android:title="@string/remove_duplicate_pages" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_remove_pages"
+        android:key="@string/remove_pages"
+        android:title="@string/remove_pages" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_sort"
+        android:key="@string/reorder_pages"
+        android:title="@string/reorder_pages" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_extrace_images"
+        android:key="@string/extract_images"
+        android:title="@string/extract_images" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_pdf_to_image"
+        android:key="@string/pdf_to_images"
+        android:title="@string/pdf_to_images" />
+    <CheckBoxPreference
+        android:icon="@drawable/ic_zip_to_pdf"
+        android:key="@string/zip_to_pdf"
+        android:title="@string/zip_to_pdf" />
+</PreferenceScreen>

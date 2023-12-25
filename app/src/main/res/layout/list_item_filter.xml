@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/filter_preview"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/Filter_image_preview"
+        android:src="@drawable/sepia" />
+
+    <TextView
+        android:id="@+id/filter_Name"
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filter_preview"
+        android:layout_alignStart="@+id/filter_preview"
+        android:layout_marginBottom="3dp"
+        android:textColor="@color/opposite_theme"
+        android:fontFamily="@font/sfpro_display_medium"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layoutDelete"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutDelete">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical"
+                android:stretchColumns="*">
+
+                <com.dd.morphingbutton.MorphingButton
+                    android:id="@+id/select_pdf_file"
+                    style="@style/MorphingButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/sfpro_display_medium"
+                    android:maxWidth="30dp"
+                    android:padding="3dp"
+                    android:text="@string/select_pdf_file" />
+
+                <com.dd.morphingbutton.MorphingButton
+                    android:id="@+id/select_text_file"
+                    style="@style/MorphingButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/select_pdf_file"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/sfpro_display_medium"
+                    android:maxWidth="30dp"
+                    android:padding="3dp"
+                    android:text="@string/select_text_file" />
+
+                <com.dd.morphingbutton.MorphingButton
+                    android:id="@+id/create_pdf_added_text"
+                    style="@style/MorphingButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/select_text_file"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/sfpro_display_medium"
+                    android:maxWidth="30dp"
+                    android:padding="3dp"
+                    android:text="@string/create_pdf" />
+
+                <com.dd.morphingbutton.MorphingButton
+                    android:id="@+id/pdfOpen"
+                    style="@style/MorphingButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/create_pdf_added_text"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="24dp"
+                    android:fontFamily="@font/sfpro_display_medium"
+                    android:maxWidth="30dp"
+                    android:padding="3dp"
+                    android:text="@string/open_pdf_text"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom|center_vertical|center_horizontal|center"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dividerColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sfpro_display_semi_bold"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:text="@string/more_options_text"
+                    android:textColor="@color/opposite_theme"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/enhancement_options_recycle_view_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/bottom_sheet" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

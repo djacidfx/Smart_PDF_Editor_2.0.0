@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mb_corner_radius_2">10dp</dimen>
+    <dimen name="mb_height_56">56dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="album_item_height">72dp</dimen>
+
+    <dimen name="img_height">90dp</dimen>
+    <dimen name="img_width">90dp</dimen>
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="mb_corner_radius_20">20dp</dimen>
+    <dimen name="mb_corner_radius_10">10dp</dimen>
+    <dimen name="txtSize">20sp</dimen>
+
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="whiteNew">#FFFFFFFF</color>
+    <color name="text_color">#222222</color>
+    <color name="light_text_color">#666666</color>
+    <color name="opposite_theme">#000000</color>
+    <color name="blackNew">#000000</color>
+    <color name="dividerColor">#A3A3A3</color>
+    <color name="colorAccent">#e33147</color>
+    <color name="appColor">#e33147</color>
+    <color name="colorBackground_black">#0a0808</color>
+    <color name="colorGray">#607d8b</color>
+    <color name="colorPrimary">#e33147</color>
+    <color name="colorPrimaryPressed">#D35C6B</color>
+    <color name="colorPrimaryTrans">#52e33147</color>
+    <color name="colorPrimaryDark">#e33147</color>
+    <color name="color_bg_light">#fff4f8fb</color>
+    <color name="dark_purple">#690339</color>
+    <color name="text_grey">#666666</color>
+    <color name="dot_inactive">#4df57c00</color>
+    <color name="light_gray">#d3d3d3</color>
+    <color name="overlay_dark_20">#33000000</color>
+    <color name="preview_bottom_size">#61ffffff</color>
+    <color name="preview_bottom_toolbar_bg">#cc000000</color>
+    <color name="red">#ff0000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="border">#d9d9d9</color>
+
+    <color name="mb_blue">#e33147</color>
+    <color name="mb_blue_dark">#ffD35C6B</color>
+    <color name="mb_gray">#E0E0E0</color>
+    <color name="mb_green">#3cc788</color>
+    <color name="mb_green_dark">#3cc788</color>
+    <color name="mb_white">#ffffff</color>
+
+    <color name="windowBackground_dark">#33343b</color>
+    <color name="windowBackground_light">#ffffff</color>
+
+    <color name="colorBlackAltLight">#3E4553</color>
+    <color name="colorBlackAlt">#222222</color>
+    <color name="colorLightGrey">#EFEFEF</color>
+    <color name="colorDarkGrey">#5F6267</color>
+</resources>

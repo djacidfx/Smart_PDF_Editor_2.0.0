@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutDelete">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ll_recent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/recent_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/sfpro_display_semi_bold"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/lbl_recently_used"
+                    android:textColor="@color/opposite_theme"
+                    android:textSize="@dimen/_14sdp" />
+
+                <LinearLayout
+                    android:id="@+id/recent_list_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recent_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@color/overlay_dark_20"
+                    android:padding="@dimen/_1sdp">
+
+                    <FrameLayout
+                        android:id="@+id/adView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNewPdf"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/sfpro_display_semi_bold"
+                    android:text="@string/create_new_pdfs"
+                    android:textColor="@color/opposite_theme"
+                    android:textSize="@dimen/_14sdp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/images_to_pdf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_image_to_pdf"
+                            app:option_text="@string/images_to_pdf" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/text_to_pdf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_text_to_pdf"
+                            app:option_text="@string/text_to_pdf" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/qr_barcode_to_pdf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_qr_barcode"
+                            app:option_text="@string/qr_barcode_pdf" />
+
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/excel_to_pdf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_excel_to_pdf"
+                            app:option_text="@string/excel_to_pdf" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/textViewPdf"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/sfpro_display_semi_bold"
+                    android:text="@string/view_pdfs"
+                    android:textColor="@color/opposite_theme"
+                    android:textSize="@dimen/_14sdp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/view_files"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_view_files"
+                            app:option_text="@string/viewFiles" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/view_history"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_history"
+                            app:option_text="@string/history" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/enhance_pdf"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/sfpro_display_semi_bold"
+                    android:text="@string/enhance_created_pdfs"
+                    android:textColor="@color/opposite_theme"
+                    android:textSize="@dimen/_14sdp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/add_password"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_add_password"
+                            app:option_text="@string/add_password" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/remove_password"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            app:option_icon="@drawable/ic_remove_password"
+                            app:option_text="@string/remove_password" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/add_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_add_text"
+                            app:option_text="@string/add_text" />
+
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/rotate_pages"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_rotate_page"
+                            app:option_text="@string/rotate_pages" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/add_watermark"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_add_watermark"
+                            app:option_text="@string/add_watermark" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/add_images"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_add_image"
+                            app:option_text="@string/add_images" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/modify_pdf"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/sfpro_display_semi_bold"
+                    android:text="@string/modify_existing_pdfs"
+                    android:textColor="@color/opposite_theme"
+                    android:textSize="@dimen/_14sdp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/merge_pdf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_merge_pdf"
+                            app:option_text="@string/merge_pdf" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/split_pdf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_split_pdf"
+                            app:option_text="@string/split_pdf" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/invert_pdf"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_invert_pdf"
+                            app:option_text="@string/invert_pdf" />
+
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/compress_pdf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_compress_pdf"
+                            app:option_text="@string/compress_pdf" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/remove_duplicates_pages_pdf"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_remove_duplicate"
+                            app:option_text="@string/remove_duplicate_pages" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/txtMore"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/sfpro_display_semi_bold"
+                    android:text="@string/more_options"
+                    android:textColor="@color/opposite_theme"
+                    android:textSize="@dimen/_14sdp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/remove_pages"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_remove_pages"
+                            app:option_text="@string/remove_pages" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/rearrange_pages"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_reorder_pages"
+                            app:option_text="@string/reorder_pages" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/extract_images"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_extrace_images"
+                            app:option_text="@string/extract_images" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/pdf_to_images"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_pdf_to_image"
+                            app:option_text="@string/pdf_to_images" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/extract_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_extract_text"
+                            app:option_text="@string/extract_text" />
+
+                        <com.templatemela.smartpdfreader.customviews.MyCardView
+                            android:id="@+id/zip_to_pdf"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:option_icon="@drawable/ic_zip_to_pdf"
+                            app:option_text="@string/zip_to_pdf" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/layoutDelete"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="array_dot_active">
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+    </array>
+    <array name="array_dot_inactive">
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+        <item>@color/dot_inactive</item>
+    </array>
+    <array name="array_page_sizes_a0_b10">
+        <item>A0 (841 x 1189 mm)</item>
+        <item>A1 (594 x 841 mm)</item>
+        <item>A2 (420 x 594 mm)</item>
+        <item>A3 (297 x 420 mm)</item>
+        <item>A4 (210 x 297 mm)</item>
+        <item>A5 (148 x 210 mm)</item>
+        <item>A6 (105 x 148 mm)</item>
+        <item>A7 (74 x 105 mm)</item>
+        <item>A8 (52 x 74 mm)</item>
+        <item>A9 (37 x 52 mm)</item>
+        <item>A10 (26 x 37 mm)</item>
+    </array>
+    <array name="array_page_sizes_b0_b10">
+        <item>B0 (1000 x 1414 mm)</item>
+        <item>B1 (707 x 1000 mm)</item>
+        <item>B2 (500 x 707 mm)</item>
+        <item>B3 (353 x 500 mm)</item>
+        <item>B4 (250 x 353 mm)</item>
+        <item>B5 (176 x 250 mm)</item>
+        <item>B6 (125 x 176 mm)</item>
+        <item>B7 (88 x 125 mm)</item>
+        <item>B8 (62 x 88 mm)</item>
+        <item>B9 (44 x 62 mm)</item>
+        <item>B10 (31 x 44 mm)</item>
+    </array>
+
+    <array name="property_names">
+        <item>File name</item>
+        <item>File size</item>
+        <item>Title</item>
+        <item>Author</item>
+        <item>Subject</item>
+        <item>Keywords</item>
+        <item>Creation date</item>
+        <item>Modify date</item>
+        <item>Producer</item>
+        <item>Creator</item>
+        <item>PDF version</item>
+        <item>Pages</item>
+    </array>
+   <!-- <array name="faq_question_answers">
+        <item>What is the supported image formats?#####PDF Advanced Tool app supported png, jpg, jpeg, tiff, gif, psd, bmp, eps etc.</item>
+        <item>Can I create a new text file using this app?#####No, You can not create text file using this app but you can create pdf file from text file.</item>
+        <item>Is there any limitation of images include in create PDF?#####No, there is not any limitation. You can include unlimited images and create pdf.</item>
+        <item>Can I insert captions in the image?#####No, captions not included in pdf file.</item>
+        <item>Can I read pdf file using this app?#####No, As of now you can only create pdf not view pdf file.</item>
+        <item>Where are the pdf file save in my device?#####You can check destination folder on setting section and yes you can change as per you want.</item>
+        <item>Can I share the pdf files that are created/edited using this app?#####Yes, you can share from view files section.</item>
+        <item>Can I recover forgot password of pdf document?#####No, You can not recover lost password of pdf document.</item>
+        <item>Can I change the password of pdf file?#####Yes but you need to first remove the password and again add new password.</item>
+        <item>Can I compress the images before creating pdf?#####Yes you can compress the images.</item>
+        <item>What is the format of the images extracted from pdf?#####Extracted image format is .png</item>
+        <item>Can I add files from cloud/online storage?#####No you can not add files from clould storage.</item>
+        <item>What is the format of the images extracted from a PDF?#####The images extracted from a PDF will be in .png format.</item>
+        <item>How can I check created file history?#####Just goto History section where you can see list of created or modified files.</item>
+        <item>How to merge multiple pdf files?#####Just goto merge pdf file section where you can select your multiple pdf file and just one click to merge it.</item>
+        <item>Can I edit images while creating pdf?#####Yes, you can edit images like apply filter and then after select images while creating pdf.</item>
+        <item>How can I add watermark to the pdf?#####You can add watermark from &quot;Add Watermark&quot; section.</item>
+        <item>Can I reorder the pages in pdf?#####Yes, You can reorder the pdf pages using Reorder Pages section.</item>
+        <item>How can I extract images from pdf?#####Just go to extract images section then after select pdf file and extract image.</item>
+        <item>Can I convert pdf into PPT, PPTX, ODT, DOC or DOCX format?#####No, As of now you can not convert that using this app.</item>
+        <item>Where can I download PDF Advanced Tool App?#####It&apos;s available on google app store so there you can easily download on your android device.</item>
+    </array>-->
+    <array name="filter_options_history">
+        <item>Created</item>
+        <item>Deleted</item>
+        <item>Renamed</item>
+        <item>Rotated</item>
+        <item>Printed</item>
+        <item>Decrypted</item>
+        <item>Encrypted</item>
+        <item>Inverted</item>
+    </array>
+    <array name="fontStyles">
+        <item>NORMAL</item>
+        <item>BOLD</item>
+        <item>ITALIC</item>
+        <item>UNDERLINE</item>
+        <item>STRIKETHRU</item>
+        <item>BOLDITALIC</item>
+    </array>
+    <array name="itemIds">
+        <item>open</item>
+        <item>delete</item>
+        <item>rename</item>
+        <item>print</item>
+        <item>e-mail</item>
+        <item>details</item>
+    </array>
+    <array name="items">
+        <item>Open File</item>
+        <item>Delete File</item>
+        <item>Rename File</item>
+        <item>Print File</item>
+        <item>Share File</item>
+        <item>Show Details</item>
+        <item>Add Password</item>
+        <item>Remove Password</item>
+        <item>Rotate Pages</item>
+        <item>Add Watermark</item>
+    </array>
+
+    <array name="sort_options">
+        <item>Name</item>
+        <item>Date</item>
+        <item>Size ▲</item>
+        <item>Size ▼</item>
+    </array>
+    <array name="sort_options_images">
+        <item>Name ▲</item>
+        <item>Name ▼</item>
+        <item>Date ▲</item>
+        <item>Date ▼</item>
+    </array>
+</resources>
